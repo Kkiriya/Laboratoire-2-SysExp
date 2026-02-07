@@ -178,9 +178,8 @@ WSL: nameserver 10.0.2.3
 
 > 📸 **Capture d'écran 1** : Insérez votre capture montrant la configuration réseau
 >
-> ![alt text](captures/partie2-Exercice1-config-reseau-Linux.jpg)
-> ![alt text](captures/partie2-Exercice1-config-reseau-WSL.jpg)
-
+> ![alt text](<captures/Partie 2/Exercice 1/config_reseau_Linux.jpg>)
+> ![alt text](<captures/Partie 2/Exercice 1/config_reseau_WSL.jpg>)
 ---
 
 ## Exercice 2 : Tests de connectivité avec ping (8 points)
