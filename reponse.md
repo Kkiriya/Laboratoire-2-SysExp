@@ -401,21 +401,21 @@ L’adresse MAC ff:ff:ff:ff:ff:ff correspond à une diffusion globale. Chaque ma
 
 Cochez les fonctionnalités que vous avez implémentées :
 
-- [ ] Affichage du nom de l'hôte
-- [ ] Affichage de la date et heure
-- [ ] Affichage de la version du système
-- [ ] Affichage de l'adresse IP locale
-- [ ] Affichage de l'adresse de la passerelle
-- [ ] Affichage des serveurs DNS
-- [ ] Test de connectivité localhost
-- [ ] Test de connectivité passerelle
-- [ ] Test de connectivité Internet (8.8.8.8)
-- [ ] Test de résolution DNS (google.com)
-- [ ] Affichage de la table ARP
-- [ ] Résolution DNS de 2+ domaines
-- [ ] Gestion des erreurs (messages si échec)
-- [ ] Commentaires dans le code
-- [ ] Affichage clair avec titres de sections
+- [x] Affichage du nom de l'hôte
+- [x] Affichage de la date et heure
+- [x] Affichage de la version du système
+- [x] Affichage de l'adresse IP locale
+- [x] Affichage de l'adresse de la passerelle
+- [x] Affichage des serveurs DNS
+- [x] Test de connectivité localhost
+- [x] Test de connectivité passerelle
+- [x] Test de connectivité Internet (8.8.8.8)
+- [x] Test de résolution DNS (google.com)
+- [x] Affichage de la table ARP
+- [x] Résolution DNS de 2+ domaines
+- [x] Gestion des erreurs (messages si échec)
+- [x] Commentaires dans le code
+- [x] Affichage clair avec titres de sections
 
 ### Difficultés rencontrées (optionnel)
 
@@ -427,7 +427,7 @@ Décrivez ici les difficultés que vous avez rencontrées lors de la création d
 
 > 📸 **Capture d'écran 7** : Capture montrant l'exécution de votre script
 >
-> ![Capture 7](captures/capture7_script_execution.png)
+> ![alt text](<captures/Partie 4/Exercice 7/capture7_script_execution.jpg>)
 
 ---
 
@@ -437,15 +437,15 @@ Décrivez ici les difficultés que vous avez rencontrées lors de la création d
 
 Vérifiez que votre projet contient :
 
-- [ ] `reponse.md` (ce fichier complété)
-- [ ] `diagnostic_reseau.sh` (votre script)
-- [ ] `captures/capture1_config_reseau.png`
-- [ ] `captures/capture2_ping.png`
-- [ ] `captures/capture3_arp_dns.png`
-- [ ] `captures/capture4_wireshark_icmp.png`
-- [ ] `captures/capture5_wireshark_dns.png`
-- [ ] `captures/capture6_wireshark_arp.png`
-- [ ] `captures/capture7_script_execution.png`
+- [x] `reponse.md` (ce fichier complété)
+- [x] `diagnostic_reseau.sh` (votre script)
+- [x] `captures/capture1_config_reseau.png`
+- [x] `captures/capture2_ping.png`
+- [x] `captures/capture3_arp_dns.png`
+- [x] `captures/capture4_wireshark_icmp.png`
+- [x] `captures/capture5_wireshark_dns.png`
+- [x] `captures/capture6_wireshark_arp.png`
+- [x] `captures/capture7_script_execution.png`
 
 ---
 

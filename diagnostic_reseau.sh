@@ -15,7 +15,7 @@ RESET='\033[0m'
 
 # 1. Afficher les informations systeme
 
-HOSTNAME=$(HOSTNAME) # imprime le nom de l'hote
+HOSTNAME=$(hostname) # imprime le nom de l'hote
 DATETIME=$(date) # imprime la date et l'heure courante
 SYSTEM_VERSION=$(uname -r) # imprime la version du systeme
 
@@ -25,7 +25,7 @@ echo -e "${CYAN}Date et heure actuelles:${RESET} ${DATETIME}"
 echo -e "${CYAN}Version du système:${RESET} ${SYSTEM_VERSION}"
 
 # 2. Afficher la configuration reseau
-LOCALIP=$(HOSTNAME -I | awk '{print $1}') # sur windows HOSTNAME -I imprime l'ip locale ainsi get l'ip gateway et l'ip sous ipv6 puisque lon veut lip sous ipv4 seulement on utilise awk
+LOCALIP=$(hostname -I | awk '{print $1}') # sur windows HOSTNAME -I imprime l'ip locale ainsi get l'ip gateway et l'ip sous ipv6 puisque lon veut lip sous ipv4 seulement on utilise awk
 DEFAULT_GATEWAY=$(ip route | awk 'NR ==1 {print $3}') # permet de n'imprimer que le default gateway et rien d'autre
 DNS_SERVER=$(awk '/^nameserver/ {print $2}' /etc/resolv.conf) #retourne toute les addresse de serveurs trouver dans le fichier resolv.conf
 
