@@ -116,7 +116,7 @@ C’est le cas car le protocole UDP est plus rapide et plus léger que le protoc
 
 ## Exercice 1 : Configuration réseau (10 points)
 
-_PS: J’utilise une machine virtuelle sous Windows pour les tests nécessitant WSL, et sinon j’utilise ma machine Linux._
+_PS: J’utilise une machine virtuelle sous Windows pour les tests nécessitant WSL/Windows, et sinon j’utilise ma machine Linux._
 
 ### a) Configuration réseau
 
@@ -314,30 +314,34 @@ WSL: 5 s
 
 # Partie 3 : Analyse Wireshark (25 points)
 
+_PS: J’utilise une machine virtuelle sous Windows pour les tests nécessitant WSL/Windows, et sinon j’utilise ma machine Linux._
+
 ## Exercice 4 : Capture et analyse ICMP (10 points)
 
 ### Analyse d'un paquet "Echo (ping) request"
 
-| Information             | Valeur observée |
-| ----------------------- | --------------- |
-| Adresse MAC source      |                 |
-| Adresse MAC destination |                 |
-| Adresse IP source       |                 |
-| Adresse IP destination  |                 |
-| Type ICMP (numéro)      |                 |
-| Code ICMP               |                 |
+| Information             | Valeur observée   |
+| ----------------------- | ----------------- |
+| Adresse MAC source      | b4:2e:99:94:2c:3a |
+| Adresse MAC destination | e0:db:d1:f2:5d:ce |
+| Adresse IP source       | 10.0.0.170        |
+| Adresse IP destination  | 8.8.8.8           |
+| Type ICMP (numéro)      | 8                 |
+| Code ICMP               | 0                 |
 
 ### Question : Différence entre le Type ICMP d'un "Echo Request" et d'un "Echo Reply" ?
 
 ```
 Votre réponse :
-
+Le type d’un Echo Request est 8.
+Le type d’un Echo Reply est 0.
 
 ```
 
 > 📸 **Capture d'écran 4** : Capture Wireshark montrant les paquets ICMP avec le détail d'un paquet
 >
-> ![Capture 4](captures/capture4_wireshark_icmp.png)
+> ![alt text](<captures/Partie 3/Exercice 4/capture_ping_google_Linux.jpg>)
+> ![alt text](<captures/Partie 3/Exercice 4/capture_ping_google_WSL.jpg>)
 
 ---
 
@@ -347,15 +351,16 @@ Votre réponse :
 
 | Information                | Valeur observée |
 | -------------------------- | --------------- |
-| Port source (requête)      |                 |
-| Port destination (requête) |                 |
-| Protocole de transport     |                 |
-| Type de requête DNS        |                 |
-| Adresse IP dans la réponse |                 |
+| Port source (requête)      | 40984           |
+| Port destination (requête) | 53              |
+| Protocole de transport     | UDP (17)        |
+| Type de requête DNS        | A               |
+| Adresse IP dans la réponse | 140.82.114.4    |
 
 > 📸 **Capture d'écran 5** : Capture Wireshark montrant la requête et réponse DNS
 >
-> ![Capture 5](captures/capture5_wireshark_dns.png)
+> ![alt text](<captures/Partie 3/Exercice 5/capture_dns_github_Linux.jpg>)
+> ![alt text](<captures/Partie 3/Exercice 5/capture_dns_github_WSL.jpg>)
 
 ---
 
@@ -363,23 +368,24 @@ Votre réponse :
 
 ### Tableau d'un échange ARP observé
 
-| Information             | ARP Request | ARP Reply |
-| ----------------------- | ----------- | --------- |
-| Adresse MAC source      |             |           |
-| Adresse MAC destination |             |           |
-| Adresse IP recherchée   |             |           |
+| Information             | ARP Request       | ARP Reply         |
+| ----------------------- | ----------------- | ----------------- |
+| Adresse MAC source      | 1a:f0:41:9a:22:2e | 54:67:e6:b1:64:f2 |
+| Adresse MAC destination | ff:ff:ff:ff:ff:ff | e2:db:d1:fa:5d:d1 |
+| Adresse IP recherchée   | 10.0.0.168        | 10.0.0.107        |
 
 ### Question : Pourquoi l'adresse MAC de destination dans l'ARP Request est-elle `ff:ff:ff:ff:ff:ff` ?
 
 ```
 Votre réponse :
-
+L’adresse MAC ff:ff:ff:ff:ff:ff correspond à une diffusion globale. Chaque machine sur le réseau lit le paquet, et celle qui possède l’adresse IP demandée répond avec son adresse MAC.
 
 ```
 
 > 📸 **Capture d'écran 6** : Capture Wireshark montrant l'échange ARP
 >
-> ![Capture 6](captures/capture6_wireshark_arp.png)
+> ![alt text](<captures/Partie 3/Exercice 6/capture_echange_arp_request_Linux.jpg>)
+> ![alt text](<captures/Partie 3/Exercice 6/capture_echange_arp_reply_Linux.jpg>)
 
 ---
 
